@@ -64,14 +64,14 @@ window.onload = function() {
     duck.className = "duck";
     body.appendChild(duck);
 
-    // const initialPosition = () => {
-    //   duck.style.backgroundPosition =
-    //     Math.random() * window.innerHeight +
-    //     "px" +
-    //     " " +
-    //     Math.random() * window.innerWidth +
-    //     "px";
-    // };
+    const initialPosition = () => {
+      duck.style.backgroundPosition =
+        Math.random() * window.innerHeight +
+        "px" +
+        " " +
+        Math.random() * window.innerWidth +
+        "px";
+    };
     const toggleFlap = () => {
       //duck = document.querySelector(".duck");
       duck.classList.toggle("flap");

@@ -8,13 +8,29 @@ window.onload = function() {
   //   2. add a class to the element
   //   3. append the element to the body )
 
+  const addDuck = () => {
+    const duck = document.createElement("div");
+    duck.classList.add("duck");
+
+    const body = document.querySelector("body");
+    body.appendChild(duck);
+  };
+
+  addDuck();
   // 2. Next, use setInterval to toggle the "flap" class on the duck every 250 ms (1/4 second)
   // https://www.w3schools.com/jsref/met_win_setinterval.asp
   // - create an arrow function called toggleFlap that take no arguments.
-  // - using the div element of 'duck', that was created in step 1, call toggle on a classList by adding a string called 'flap'  
+  // - using the div element of 'duck', that was created in step 1, call toggle on a classList by adding a string called 'flap'
   // - outside of your function call `setInterval` and pass in the name of the function created in this step with the milliseconds integer written above
   // - in your Chrome devtools, you should see the class changing from `duck` to `duck flap`
-  
+
+  const toggleFlap = () => {
+    const duck = document.querySelector(".duck");
+    duck.classList.add("flap");
+  };
+
+  setInterval(toggleFlap(), 250);
+
   // 3. Fantastic!  Now, let's move the duck using CSS "top" and "left". Create
   // a function `moveDuck` that takes a duck object as an argument and sets the
   // "top" and "left" CSS properties.
@@ -23,7 +39,6 @@ window.onload = function() {
   // setting the CSS style of `top` and `left` equal to each of these respectively would be a way of achieving this.
   // concatenate each with 'px'
   // you may need to refresh your browser to see the duck change positions.
-  
 
   // 4. Try making the duck move to a different location every second (what did we use to do this several lines up??)
 

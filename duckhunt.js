@@ -49,6 +49,7 @@ window.onload = function() {
   moveDuck();
 
   // 4. Try making the duck move to a different location every second (what did we use to do this several lines up??)
+  setInterval(moveDuck, 1000);
 
   // 5. Congratulations! Move on to part 2!
 

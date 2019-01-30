@@ -26,10 +26,10 @@ window.onload = function() {
 
   const toggleFlap = () => {
     const duck = document.querySelector(".duck");
-    duck.classList.add("flap");
+    duck.classList.toggle("flap");
   };
 
-  setInterval(toggleFlap(), 250);
+  setInterval(toggleFlap, 250);
 
   // 3. Fantastic!  Now, let's move the duck using CSS "top" and "left". Create
   // a function `moveDuck` that takes a duck object as an argument and sets the

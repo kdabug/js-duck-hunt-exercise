@@ -10,7 +10,7 @@ For this exercise, you'll be building the classic nintendo game, DUCK HUNT, usin
 
 #### Starter Code
 
-- You have been provided with starter code, so you will ONLY need to work in the duckhunt.js file and duckhunt.css (only making directed changes in css file).
+- You have been provided with starter code, so you will ONLY need to work in the duckhunt.js file and duckhunt.css (only making directed changes in CSS file).
 - To make this activity more managable, instructions have been provided in the duckhung.js file and broken into 3 parts. 
 
 #### Here are some **tips/hints** to get started:
@@ -21,9 +21,9 @@ For this exercise, you'll be building the classic nintendo game, DUCK HUNT, usin
 
 ## Submission
 
-This assignment is due **Wednesday, January 30th by 11:00 PM**
+This assignment is due **Wednesday, January 30th by 11:00 PM** with a PR with your name, comfort and completion levels.
 
-Please find some screenshots of what you'll be creating. Feel free to get creative with how you style your interface.
+Feel free to get creative with how you style your interface.  
 
 ![Screen-shot](./images/duck-hunt-part-1.png) - Part 1
 ![Screen-shot](./images/duck-hunt-part-2.png) - Part 2

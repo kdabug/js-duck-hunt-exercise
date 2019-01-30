@@ -60,30 +60,41 @@ window.onload = function() {
   //    and "returns" the duck object
 
   const createDuck = () => {
-    const div = document.createElement("div");
-    div.classList.add("duck");
+    const duck = document.createElement("div");
+    duck.className = "duck";
+    body.appendChild(duck);
 
-    const body = document.querySelector("body");
-    body.appendChild(div);
-    const duck = document.querySelector(".duck");
-
+    // const initialPosition = () => {
+    //   duck.style.backgroundPosition =
+    //     Math.random() * window.innerHeight +
+    //     "px" +
+    //     " " +
+    //     Math.random() * window.innerWidth +
+    //     "px";
+    // };
     const toggleFlap = () => {
-      const duck = document.querySelector(".duck");
+      //duck = document.querySelector(".duck");
       duck.classList.toggle("flap");
     };
-    const moveDuck = () => {
+    const moveDuck = obj => {
       duck.style.left = Math.random() * window.innerWidth + "px";
       duck.style.top = Math.random() * window.innerHeight + "px";
     };
 
     setInterval(toggleFlap, 250);
     setInterval(moveDuck, 1000);
+    console.log(duck);
+    return duck;
   };
 
   createDuck();
 
   // 7. Now, let's create lots of ducks!  Use a "for" loop to create 5 ducks
   //    using our fancy new createDuck() function
+
+  for (i = 0; i < 5; i++) {
+    createDuck();
+  }
 
   // 8. Uh oh, our ducks are overlapping.  Modify createDuck so each time
   //     it creates a duck, it appears in a random location

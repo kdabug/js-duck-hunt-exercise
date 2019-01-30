@@ -11,8 +11,8 @@ window.onload = function() {
   // 2. Next, use setInterval to toggle the "flap" class on the duck every 250 ms (1/4 second)
   // https://www.w3schools.com/jsref/met_win_setinterval.asp
   // - create an arrow function called toggleFlap that take no arguments.
-  // - toggle the div element of 'duck', that was created in step 1, and toggle the classList by adding a string called 'flap'
-  // - outside of your function call `setInterval` and pass in the name of the function created in this step with the milliseconds.
+  // - using the div element of 'duck', that was created in step 1, call toggle on a classList by adding a string called 'flap'  
+  // - outside of your function call `setInterval` and pass in the name of the function created in this step with the milliseconds integer written above
   // - in your Chrome devtools, you should see the class changing from `duck` to `duck flap`
   
   // 3. Fantastic!  Now, let's move the duck using CSS "top" and "left". Create

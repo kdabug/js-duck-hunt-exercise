@@ -40,6 +40,14 @@ window.onload = function() {
   // concatenate each with 'px'
   // you may need to refresh your browser to see the duck change positions.
 
+  const moveDuck = obj => {
+    let duck = document.querySelector(".duck");
+    duck.style.left = Math.random() * window.innerWidth + "px";
+    duck.style.top = Math.random() * window.innerHeight + "px";
+  };
+
+  moveDuck();
+
   // 4. Try making the duck move to a different location every second (what did we use to do this several lines up??)
 
   // 5. Congratulations! Move on to part 2!

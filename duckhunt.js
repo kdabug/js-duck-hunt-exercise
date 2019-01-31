@@ -87,14 +87,16 @@ window.onload = function() {
     return duck;
   };
 
-  createDuck();
+  //createDuck();
 
   // 7. Now, let's create lots of ducks!  Use a "for" loop to create 5 ducks
   //    using our fancy new createDuck() function
-
-  for (i = 0; i < 5; i++) {
-    createDuck();
-  }
+  const allTheDucks = () => {
+    for (i = 0; i < 5; i++) {
+      createDuck();
+    }
+  };
+  allTheDucks();
 
   // 8. Uh oh, our ducks are overlapping.  Modify createDuck so each time
   //     it creates a duck, it appears in a random location
@@ -107,6 +109,17 @@ window.onload = function() {
 
   // 11. BOOM. Attach a "click" handler that adds the "shot" class to
   //     the duck when you click on it!
+
+  const boomMachine = () => {
+    let duck = document.querySelectorAll(".duck");
+    for (i = 0; i < duck.length; i++) {
+      duck[i].addEventListener("click", function() {
+        this.classList.add("shot");
+      });
+    }
+  };
+
+  boomMachine();
 
   // 12. After a duck has been clicked on, remove it from the DOM after
   //     a short delay (1 second) Hint Hint...use setTimeout

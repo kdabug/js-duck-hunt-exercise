@@ -63,24 +63,25 @@ window.onload = function() {
     const duck = document.createElement("div");
     duck.className = "duck";
     body.appendChild(duck);
-
-    const initialPosition = () => {
-      duck.style.backgroundPosition =
-        Math.random() * window.innerHeight +
-        "px" +
-        " " +
-        Math.random() * window.innerWidth +
-        "px";
+    const randomPosition = () => {
+      duck.style.left = Math.random() * window.innerWidth + "px";
+      duck.style.top = Math.random() * window.innerHeight + "px";
     };
+    const changeDirection = num => {
+      if (num < duck.style.left) {
+        duck.classList.toggle("right");
+      }
+    };
+    duck.style.backgroundPosition = randomPosition();
     const toggleFlap = () => {
       //duck = document.querySelector(".duck");
       duck.classList.toggle("flap");
     };
     const moveDuck = obj => {
-      duck.style.left = Math.random() * window.innerWidth + "px";
-      duck.style.top = Math.random() * window.innerHeight + "px";
+      let currentPosition = duck.style.left;
+      randomPosition();
+      changeDirection(currentPosition);
     };
-
     setInterval(toggleFlap, 250);
     setInterval(moveDuck, 1000);
     console.log(duck);
@@ -145,10 +146,13 @@ window.onload = function() {
   // 14. BONUS: The ducks are moving pretty erratically, can you think
   //     of a way to adjust the ducks speed based on how far needs to move?
 
-  // I
+  //The wording is confusing me. You could do what I tried to do in the below question (#15).
+  // I tried to store one of the position properties in a temporary variable and use that variable in a function that compares the current position to the next position.
+  // If the current position is close to the next position, the bird can move slowly. If the position is farther away, it could apply/toggle a class that increases the speed.
 
   // 15. BONUS: Add the "left" and "right" class to the duck based on the
   //     direction the duck is flying and change the way the duck is facing
 
+  // Added in above code (although - it looks odd, they change directions...but it's odd.)
   // FIN. You win 1 trillion tokens.  Play the day away!
 };

@@ -114,11 +114,16 @@ window.onload = function() {
     let duck = document.querySelectorAll(".duck");
     for (i = 0; i < duck.length; i++) {
       duck[i].addEventListener("click", function() {
+        console.log("first: ", this);
         this.classList.add("shot");
+        setTimeout(function() {
+          //console.log("inside: ", duck[i].removeChild());
+          document.querySelector(".shot").remove();
+          checkForWinner();
+        }, 1000);
       });
     }
   };
-
   boomMachine();
 
   // 12. After a duck has been clicked on, remove it from the DOM after
@@ -128,8 +133,19 @@ window.onload = function() {
   // 13. Create a new function named checkForWinner() that reads the DOM
   //     to see if there are any ducks left. (How can we check the DOM for more than one element?, and how can we see how many elements we get back) If not, alert "YOU WIN!"
 
+  const checkForWinner = () => {
+    let duck = document.querySelectorAll(".duck");
+    if (duck.length === 0 || duck.length === null) {
+      alert("YOU WIN!");
+    }
+  };
+
+  //checkForWinner();
+
   // 14. BONUS: The ducks are moving pretty erratically, can you think
   //     of a way to adjust the ducks speed based on how far needs to move?
+
+  // I
 
   // 15. BONUS: Add the "left" and "right" class to the duck based on the
   //     direction the duck is flying and change the way the duck is facing

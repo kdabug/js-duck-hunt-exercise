@@ -17,6 +17,7 @@ window.onload = function() {
   // };
 
   // addDuck();
+
   // // 2. Next, use setInterval to toggle the "flap" class on the duck every 250 ms (1/4 second)
   // // https://www.w3schools.com/jsref/met_win_setinterval.asp
   // // - create an arrow function called toggleFlap that take no arguments.
@@ -68,8 +69,10 @@ window.onload = function() {
       duck.style.top = Math.random() * window.innerHeight + "px";
     };
     const changeDirection = num => {
-      if (num < duck.style.left) {
-        duck.classList.toggle("right");
+      if (num > duck.style.left) {
+        duck.classList.add("right");
+      } else {
+        duck.classList.remove("right");
       }
     };
     duck.style.backgroundPosition = randomPosition();
@@ -77,7 +80,7 @@ window.onload = function() {
       //duck = document.querySelector(".duck");
       duck.classList.toggle("flap");
     };
-    const moveDuck = obj => {
+    const moveDuck = () => {
       let currentPosition = duck.style.left;
       randomPosition();
       changeDirection(currentPosition);
@@ -115,7 +118,7 @@ window.onload = function() {
     let duck = document.querySelectorAll(".duck");
     for (i = 0; i < duck.length; i++) {
       duck[i].addEventListener("click", function() {
-        console.log("first: ", this);
+        //console.log("first: ", this);
         this.classList.add("shot");
         setTimeout(function() {
           //console.log("inside: ", duck[i].removeChild());
